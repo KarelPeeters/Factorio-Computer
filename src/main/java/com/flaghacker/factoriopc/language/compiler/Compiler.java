@@ -124,6 +124,8 @@ public class Compiler implements StructureVisitor<CommandList>
 						LOADb,
 						type.getInstructionType()
 				);
+
+				env.releaseTmpVariable(tmp);
 			}
 		}
 
