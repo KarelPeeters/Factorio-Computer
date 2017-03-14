@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+
+repositories {
+    jcenter()
+}
+
+jar {
+    def mainClass = "com.flaghacker.factoriopc.commandline.Main"
+
+    manifest {
+        attributes("Main-Class" : mainClass)
+    }
+}
+
+dependencies {
+    compile 'org.json:json:20141113'
+	compile 'org.luaj:luaj-jse:3.0.1'
+
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.commons:commons-lang3:3.0'
+
+    compile 'com.beust:jcommander:1.48'
+}
